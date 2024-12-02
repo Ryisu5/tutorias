@@ -1,0 +1,2 @@
+Realizar un programa que permita calcular el area y perimetro de diferentes formas (triangulo, circulo, cuadrodo y rectangulo), ademas realiza una aplicacion de consola que permita al usuario crear, modificar y eliminar los objetos, ademas de realizar sus calculos.
+
