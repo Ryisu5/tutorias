@@ -1,4 +1,19 @@
-import Producto 
+
+#Funciona
+
+
+class Producto:
+	def __init__(self, Nombre,Precio):
+		self.Nombre=Nombre
+		self.Precio=Precio
+		self.Stock=0
+
+	def actualizarStock(self, cantidad):
+		self.Stock += cantidad
+	def calcularinventario (self):
+		return self.Stock * self.Precio
+	def verdatos(self):
+		return f"Nombre:{self.Nombre}, Precio:{self.Precio}, Stock:{self.Stock}"
 
 
 
