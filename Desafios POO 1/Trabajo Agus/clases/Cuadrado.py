@@ -1,3 +1,4 @@
+from Formas import Formas
 
 class Cuadrado(Formas):
 	def __init__(self, base):

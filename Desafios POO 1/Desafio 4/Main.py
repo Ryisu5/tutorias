@@ -1,4 +1,5 @@
 from CuentaBancaria import CuentaBancaria
+
 def main():  # definiendo una funcion main
 	numerocuenta=input ("Ingrese el numero de cuenta:")
 	nombre=input("Ingrese su nombre:")
@@ -7,6 +8,7 @@ def main():  # definiendo una funcion main
 	cuenta=CuentaBancaria(numerocuenta,nombre, apellido)
 
 	while True:
+		"""
 		print("opciones")
 		print ("1. Depositar")
 		print("2. Retirar")
@@ -14,6 +16,9 @@ def main():  # definiendo una funcion main
 		print ("4. Salir")
 
 		opcion=input("Seleccione una opcion (1-4):")
+		"""
+		opcion=input("Opciones\n1. Depositar\n2. Retirar\n3. Ver saldo\n4. Salir\nSeleccione una opcion (1-4):")
+
 
 		if opcion=="1":
 			cantidad=int(input("Ingrese la cantidad a depositar:"))
@@ -21,17 +26,16 @@ def main():  # definiendo una funcion main
 		elif opcion=="2":
 			cantidad=int(input("Ingrese a cantidad a retirar:"))
 			cuenta.retirar(cantidad)
+
 		elif opcion=="3":
 			cuenta.versaldo()
 		elif opcion=="4":
 			print ("Saliendo...")
+
+			print (f"Datos de la cuenta:\n{cuenta}")
 			break
 		else:
 			print("Opcion no valida.Intente de nuevo")
-		print ("Datos de la cuenta:")
-		print (f"numerocuenta:{cuenta.numerocuenta}")
-		print (f"Nombre:{cuenta.nombre}{cuenta.apellido}")
-		print (f"Saldo Final:{cuenta.saldo}")
-		
+			
 if __name__ == "__main__":
 	main()
