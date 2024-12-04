@@ -1,27 +1,27 @@
 from typing import List, Optional
+# Se importa la clase Cliente
+from clase_cliente import Cliente
 class GestorClientes:
     def __init__(self):
-        self.clientes: List[Cliente] = []
+        self.__clientes: List[Cliente] = []
 
     def alta_cliente(self, dni: str, nombre: str, apellido: str, direccion: str, telefono: str) -> Cliente:
-        if any(c.dni == dni for c in self.clientes):
+        if any(c.get_dni() == dni for c in self.__clientes):  # Aqui cambie c.dni por el metodo de acceso al dni de cliente(.get_dni)
             raise ValueError(f"Ya existe un cliente con DNI {dni}")
         nuevo_cliente = Cliente(dni, nombre, apellido, direccion, telefono)
-        self.clientes.append(nuevo_cliente)
+        self.__clientes.append(nuevo_cliente)
         return nuevo_cliente
 
     def buscar_cliente(self, dni: str) -> Optional[Cliente]:
-        for cliente in self.clientes:
-            if cliente.dni == dni:
+        for cliente in self.__clientes:
+            if cliente.get_dni() == dni:  # Aqui cambie cliente.dni por el metodo de acceso al dni de cliente(.get_dni)
                 return cliente
         return None
 
     def listar_clientes(self):
-        return self.clientes
+        return self.__clientes
 
-
-# Ejemplo de prueba
-if __name__ == "__main__":
+def main():
     gestor = GestorClientes()
 
     # Alta de clientes
@@ -42,3 +42,9 @@ if __name__ == "__main__":
         gestor.alta_cliente("12345678", "Carlos", "Gómez", "Calle 789", "555555555")
     except ValueError as e:
         print("\nError:", e)
+
+
+
+# Ejemplo de prueba
+if __name__ == "__main__":  # Para usar este if si es necesario crear una funcion def main():
+    main()
