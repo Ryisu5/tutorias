@@ -1,2 +1,17 @@
 Realizar un programa que permita calcular el area y perimetro de diferentes formas (triangulo, circulo, cuadrodo y rectangulo), ademas realiza una aplicacion de consola que permita al usuario crear, modificar y eliminar los objetos, ademas de realizar sus calculos.
 
+Producto. Crea una clase Producto con los siguientes atributos: Nombre, Precio y
+Stock siendo obligatorios sólo los atributos Nombre y Precio. El Stock debe comenzar
+con 0. Define métodos para actualizar el stock, para calcular el total del inventario y
+para ver los datos. Además, escribe una aplicación de consola que permita al usuario:
+1- actualizar el stock y 2- calcular inventario hasta que decida detenerse. Al finalizar
+deberá mostrar los datos del producto, stock e inventario final.
+
+
+Cuenta Bancaria. Crea una clase CuentaBancaria con los siguientes atributos
+obligatorios: número de cuenta, nombre y apellido. El saldo debe comenzar con
+100.000. Agrega e implementa métodos para: 1- depositar (debe aceptar un valor
+entero y sumarlo al saldo), 2- retirar (debe aceptar un valor entero y restarlo al saldo
+sólo si hay dinero suficiente para retirar en la cuenta) y 3- ver saldo. Además, escribe
+una aplicación de consola que permita al usuario depositar, retirar o ver saldo hasta
+que decida detenerse. Al finalizar deberá mostrar los datos de la cuenta y el saldo.
