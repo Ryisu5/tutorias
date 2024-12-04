@@ -28,6 +28,10 @@ def main():  # definiendo una funcion main
 			break
 		else:
 			print("Opcion no valida.Intente de nuevo")
-
+		print ("Datos de la cuenta:")
+		print (f"numerocuenta:{cuenta.numerocuenta}")
+		print (f"Nombre:{cuenta.nombre}{cuenta.apellido}")
+		print (f"Saldo Final:{cuenta.saldo}")
+		
 if __name__ == "__main__":
 	main()
